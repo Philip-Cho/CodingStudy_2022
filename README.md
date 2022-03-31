@@ -14,6 +14,8 @@
 |이중 for 반복문  |O(N^2)  |
 |for 반복문 2개  |O(N)    |
 
+- 리스트 컴프리헨션이 일반 for문보다 속도가 더 빠르다
+  - [코드로 알아보는 리스트컴프리헨션이 더 빠른 이유](https://jeongukjae.github.io/posts/inspecting-list-comprehension/)
 
 ## 📖 참고자료
 1) [이코테 교재 강의](https://www.youtube.com/playlist?list=PLRx0vPvlEmdAghTr5mXQxGpHjWqSz0dgC)
