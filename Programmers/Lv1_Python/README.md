@@ -52,3 +52,18 @@
 1. 파이썬에서 재귀함수는 **1000회 이상 호출**하면 에러가 발생한다.
     - 재귀함수를 위한 스택에서 1000개 만큼의 공간만 확보했기 때문
 
+        node = head
+        while node.next:
+            print(node.data)
+            node = node.next
+        print (node.data)
+        
+<br>
+
+```
+node = head
+while node.next:
+    print(node.data)
+    node = node.next
+print (node.data)
+```
