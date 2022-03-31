@@ -43,27 +43,26 @@
     4. 재귀 호출이 너무 깊어질 때
     5. 이미 해제된 메모리를 참조할 때
 
-경험에 따르면 주로 인덱스 범위 실수로 인한 경우가 가장 많으며, 리스트/딕셔너리 등에 참조해야하는 원소 값이 없을 때도 문제가 발생한다
-- **6주차 키패드 누르기 문제**의 경우 딕셔너리에 (2,2), (5,5), (8,8), (0,0)와 같은 키값들을 누락시켜서 에러가 발생했다
+경험에 따르면 주로 인덱스 범위 실수로 인한 경우가 가장 많으며, 리스트/딕셔너리 등에 참조해야하는 원소 값이 없을 때도 문제가 발생한다.
+- **6주차 키패드 누르기 문제**의 경우 딕셔너리에 (2,2), (5,5), (8,8), (0,0)와 같은 키값들을 누락시켜서 에러가 발생했다.
 
 <br>
 
 ## 기타 Tip
 1. 파이썬에서 재귀함수는 **1000회 이상 호출**하면 에러가 발생한다.
     - 재귀함수를 위한 스택에서 1000개 만큼의 공간만 확보했기 때문
-
-        node = head
-        while node.next:
-            print(node.data)
-            node = node.next
-        print (node.data)
-        
-<br>
-
+ 
+2. while문에 불린(boolean) 혹은 조건형태가 아닌 값을 넣을 경우 루프가 돈다.(계속 반복)
+- 아래의 **링크드 리스트** 코드에서 **node.next**의 경우 **None**값이 오기 전까지 루프를 돈다
 ```
-node = head
-while node.next:
-    print(node.data)
-    node = node.next
-print (node.data)
+class Node:
+    def __init__(self, data, next=None):
+        self.data = data
+        self.next = next
+
+def add(data):
+    node = head
+    while node.next:
+        node = node.next
+    node.next = Node(data) 
 ```
