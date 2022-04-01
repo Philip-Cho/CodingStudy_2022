@@ -17,6 +17,9 @@
 
 ## [sort() VS sorted()]
 
+(수정)
+- sorted 람다 방식: 메뉴 리뉴얼 문제
+- sorted(food_dict.items(), key=lambda item: item[1])
 <br>
 
 ## [슬라이싱]
