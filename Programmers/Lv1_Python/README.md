@@ -9,16 +9,18 @@
 if/else 조건문은 한줄로 작성이 가능하다
 
 #### 예제: Week8. 콜라츠
-
-> ### 일반적인 코드
-> if num%==0:   <br>
->   num = num / 2   <br>
-> else:   <br>
->   num = num * 3 + 1   <br>
+```
+# 일반적인 코드
+if num%==0:
+  num = num / 2
+else:
+  num = num * 3 + 1
+```
 
 위의 코드는 다음과 같이 작성이 가능하다
-
-> num = num / 2 if num%2==0 else num * 3 + 1
+```
+num = num / 2 if num%2==0 else num * 3 + 1
+```
 
 <br>
 
