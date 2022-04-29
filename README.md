@@ -44,7 +44,7 @@ print(end)
 ## [코드 간결성2]
 if/else 조건문은 한줄로 작성이 가능하다
 
-#### 예제: Week8. 콜라츠
+#### programmers Level1 예제: Week8. 콜라츠
 ```
 # 일반적인 코드
 if num%==0:
