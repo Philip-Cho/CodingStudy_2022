@@ -34,6 +34,27 @@ num = num / 2 if num%2==0 else num * 3 + 1
 
 <br>
 
+## [순열과 조합, 그리고 페어링(pairing)]
+- 리스트 1개의 원소들에 대한 **순열(Permutation)**을 iteration 형태로 반환
+- 리스트 1개의 원소들에 대한 **조합(Combination)**을 iteration 형태로 반환
+- 리스트 2개의 원소들에 대한 **조합(Combination)**을 iteration 형태로 반환
+
+```
+from itertools import permutations, combinations, product
+
+a = [1,2,3,4]
+b = [5,6,7,8]
+
+# 리스트1, 순열, 조합(2개 뽑아 나열)
+print(list(permutations(a, 2)))   # [(1, 2), (1, 3), (1, 4), (2, 1), (2, 3), (2, 4), (3, 1), (3, 2), (3, 4), (4, 1), (4, 2), (4, 3)]
+print(list(combinations(a, 2)))   # [(1, 2), (1, 3), (1, 4), (2, 3), (2, 4), (3, 4)]
+
+# 리스트2, 모든 원소들에 대한 조합
+print(list(product(a,b)))     # [(1, 5), (1, 6), (1, 7), (1, 8), (2, 5), (2, 6), (2, 7), (2, 8), (3, 5), (3, 6), (3, 7), (3, 8), (4, 5), (4, 6), (4, 7), (4, 8)]
+```
+
+<br> 
+
 ## [sort() VS sorted()]
 
 (수정)
