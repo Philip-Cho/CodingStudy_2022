@@ -17,6 +17,24 @@
 - 리스트 컴프리헨션이 일반 for문보다 속도가 더 빠르다
   - [코드로 알아보는 리스트컴프리헨션이 더 빠른 이유](https://jeongukjae.github.io/posts/inspecting-list-comprehension/)
 
+
+<br>
+
+## 실행시간 측정
+코드가 전부 실행되는 시간을 체크할 수 있다. (시간단위: 초)
+
+```
+import time
+start = time.time() # 코드 시작
+
+# 코드 작성
+
+end = time.time() - start
+print(end)
+```
+
+<br>
+
 ## 📖 참고자료
 1) [이코테 교재 강의](https://www.youtube.com/playlist?list=PLRx0vPvlEmdAghTr5mXQxGpHjWqSz0dgC)
 2) [패스트캠퍼스 강의](https://fastcampus.co.kr/dev_online_algo)
