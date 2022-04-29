@@ -1,33 +1,46 @@
 # 보충 개념
 
-## [코드 간결성1]
-코드를 작성할 때에는 짧고 명확하며 간결할수록 좋다. 다음에서는 파이썬 코드를 조금 더 간결하게 해줄 수 있는 **리스트 컴프리헨션, lambda, map, reduce, filter**에 대해 정리해보려 한다.
+## [리스트의 메소드]
+#### 1. index(value)
+- ex) 최대/최소값의 인덱스 찾기
+```
+a = [3,5,2,7,4]
+max_a = max(a)
+min_a = min(a)
+print(a.index(max_a))
+print(a.index(min_a))
+
+# 더 간단한 방법으로는 numpy의 argmax 메소드가 있다
+np.argmax(a)
+np.argmin(b)
+```
+
+#### 2. insert(index, value)
+- 리스트 특정 인덱스 위치에 새 값을 삽입한다
+
+#### 3. count(value)
+- value가 나온 횟수를 나타냄
+
+#### 4. reverse()
+- 리스트를 반전시킴
+- **inplace=True**가 **default**로 적용된다
+
+#### 5. remove(value)
+- 리스트 순서상 처음으로 나오는 value 값을 제거한다 (pop은 인덱스로 접근하지만, remove는 value로 접근함)
+- **inplace=True**가 **default**로 적용된다
+
+#### 6. del
+- pop과 같이 index로 삭제 가능
+```
+a = [1,2,3,4,5]
+
+del a # a 리스트 자체를 제거
+del a[4] # 4번째 인덱스 값인 5 제거
+a.pop(4) # 4번째 인덱스 값인 5 제거
+```
 
 <br>
 
-## [코드 간결성2]
-if/else 조건문은 한줄로 작성이 가능하다
-
-#### 예제: Week8. 콜라츠
-```
-# 일반적인 코드
-if num%==0:
-  num = num / 2
-else:
-  num = num * 3 + 1
-```
-
-위의 코드는 다음과 같이 작성이 가능하다
-```
-num = num / 2 if num%2==0 else num * 3 + 1
-```
-
-<br>
-
-## [변수명 작성 규칙]
-사람들마다 변수명을 짓는 방식은 다양하게 나타나지만 사회적으로 공통된 표기방식들이 있다. **Camel case, Pascal case, Snake case, Kebab case**가 대표적인 표기 방법이다
-
-<br>
 
 ## [문자열 메소드]
 크롤링 및 데이터 전처리 과정에서 문자열을 여러가지 방법으로 다루게 될 일들이 많다. 또한, 자바의 경우 문자열은 하나의 객체로 메모리 효율과도 관련이 있다. 효율적으로 코딩하기 위해 알아둬야 할 몇가지 메소드들을 정리해두고자 한다.
