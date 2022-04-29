@@ -90,6 +90,25 @@ print(list(product(a,b)))         # [(1, 5), (1, 6), (1, 7), (1, 8), (2, 5), (2,
 
 <br>
 
+## 우선순위 큐(PriorityQueue)
+- input으로 (우선순위, 데이터)를 삽입한다
+```
+import queue
+data_queue = queue.PriorityQueue()
+
+# input: (우선순위, 데이터)
+data_queue.put((10, "korea"))
+data_queue.put((5, 1))
+data_queue.put((15, "china"))
+
+data_queue.queue # [(5, 1), (10, 'korea'), (15, 'china')]
+data_queue.qsize() # 3
+data_queue.get() # (5, 1) 값을 pop
+```
+
+<br>
+
+
 ## [Runtime Error]
 백준, 프로그래머스 문제를 풀다보면 test 데이터에 대해서 **'런타임 에러'**가 발생하는 경우가 있다. 파이썬을 직접 실행하는 경우에는 구체적으로 에러 위치를 볼 수 있을 테지만 문제는 test 데이터는 어떤 경우인지 주어지지 않는다는 점이다. **'런타임 에러'**가 발생했을 때는 다음과 같은 부분이 원인이 됬을 수 있으므로 확인해보도록 한다.
 
